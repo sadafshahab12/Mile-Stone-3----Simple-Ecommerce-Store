@@ -2,7 +2,6 @@
 import React, { useContext } from "react";
 import { ProductType } from "../components/Products";
 import { CartContext } from "../components/context/CartContext";
-import CheckOutForm from "../components/CheckOutForm";
 import { ContextProp } from "../product-details/[id]/page";
 import Image from "next/image";
 import { FaTrash } from "react-icons/fa";
