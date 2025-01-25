@@ -77,7 +77,7 @@ export const products = [
         description: "Iconic low-top sneakers with a signature stripe.",
         price: 65.99,
         category: "Lifestyle Shoes",
-        image: "https://www.jdsports.gr/2667419-product_horizontal/vans-old-skool.jpg",
+        image: "https://jutay.co/cdn/shop/products/4_8cf353df-13f1-4e3e-bdff-fcb9127dc2af.jpg?v=1638192125",
         availableSizes: ["6", "7", "8", "9", "10"],
       },
       {
