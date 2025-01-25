@@ -97,7 +97,6 @@ const Products = () => {
           </Link>
         ))}
       </div>
-      <Link href={"/cart"}>go to cart</Link>
     </div>
   );
 };
