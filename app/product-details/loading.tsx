@@ -3,7 +3,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-10 items-center  max-w-5xl mx-auto p-10">
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-10 items-center  max-w-5xl mx-auto p-10 h-screen">
       <Skeleton className="w-full md:h-[20rem] h-[15rem]   p-4" />
       <div className="space-y-4 p-5">
         <Skeleton className="w-full h-8 rounded-md" />
