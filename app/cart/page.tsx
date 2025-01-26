@@ -18,7 +18,7 @@ const CartPage = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-10">
+    <div className="max-w-6xl mx-auto py-10 h-screen">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">Shopping Cart</h1>
         <p>Total Items: {cart.length}</p>

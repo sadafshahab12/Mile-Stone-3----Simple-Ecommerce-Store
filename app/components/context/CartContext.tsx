@@ -1,6 +1,7 @@
 "use client";
 import React, { createContext, ReactNode, useState } from "react";
 import { ProductType } from "../Products";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext({});
 export const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -8,6 +9,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [selectedSize, setSelectedSize] = useState<string>("");
 
   const addToCart = (product: ProductType, quantity: number) => {
+    if (!selectedSize) {
+      alert("Please Select size");
+      return setCart([]);
+    }
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
@@ -18,6 +23,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         );
       }
       return [...prevCart, { ...product, quantity }];
+    });
+    Swal.fire({
+      icon: "success",
+      text: `${product.name} add to cart`,
+      showConfirmButton: false,
+      timer: 1500,
     });
   };
 

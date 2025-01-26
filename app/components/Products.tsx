@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
+import Loading from "./loading";
 
 export interface ProductType {
   id: number;
@@ -19,6 +20,7 @@ const Products = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<ProductType[]>([]);
   const [product, setProducts] = useState<ProductType[]>([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,6 +28,7 @@ const Products = () => {
         const data = await response.json();
         setProducts(data);
         setFilteredProducts(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
@@ -47,6 +50,13 @@ const Products = () => {
   const handleClearSearchQuery = () => {
     setSearchQuery("");
   };
+  if (loading) {
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
+  }
   return (
     <div className=" max-w-7xl mx-auto p-5">
       <div className="relative my-5">
