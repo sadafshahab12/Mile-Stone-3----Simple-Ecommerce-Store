@@ -9,7 +9,7 @@ import { ContextProp } from "../product-details/[id]/page";
 const Navbar = () => {
   const { cart } = useContext(CartContext) as ContextProp;
   return (
-    <div className="flex justify-between py-5 px-20  mx-auto shadow-md">
+    <div className="flex justify-between py-5 md:px-20 sm:px-10 px-5  mx-auto shadow-md">
       <Image
         src="https://pngimg.com/d/nike_PNG6.png"
         alt="logo"

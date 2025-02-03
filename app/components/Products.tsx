@@ -86,7 +86,7 @@ const Products = () => {
         )}
       </div>
 
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 md:px-10 px-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 md:px-10 sm:px-5 px-0">
         {filteredProducts.map((product: ProductType) => (
           <Link href={`/product-details/${product.id}`} key={product.id}>
             <div className="border shadow-md p-5 space-y-4 rounded-md">

@@ -84,13 +84,13 @@ const ProductDetails = () => {
           </p>
           <p>{product.description}</p>
           <p>{product.price}</p>
-          <div className="flex items-center gap-3">
-            Select Size:{" "}
+          <div className="flex items-center sm:gap-3 gap-2">
+            <h1 className="text-sm">Select Size:</h1>
             {product.availableSizes.map((size) => (
               <p
                 onClick={() => handleSizeSelect(size)}
                 key={size}
-                className={`w-10 h-10 flex justify-center items-center rounded-md cursor-pointer ${
+                className={`text-sm w-10 h-10 flex justify-center items-center rounded-md cursor-pointer ${
                   selectedSize === size
                     ? "bg-slate-800 text-white"
                     : "bg-transparent border-2 border-slate-900 text-black"
