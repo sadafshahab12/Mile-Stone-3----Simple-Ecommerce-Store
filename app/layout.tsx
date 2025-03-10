@@ -22,9 +22,10 @@ export default function RootLayout({
         className={` antialiased`}
       >
         <CartProvider>
-          <Navbar/>
-          {children}</CartProvider>
-          <Footer/>
+          <Navbar />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
